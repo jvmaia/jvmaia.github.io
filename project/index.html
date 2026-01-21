@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JV Blog</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        nav {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        nav h2 {
+            margin-top: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+        }
+
+        h1 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Blog Posts</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#post1">When I wrote an app for internal sales</a></li>
+            <li><a href="#post2">Debugging</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to JV Blog</h1>
+            <p>Hello! I'm Joao Maia (aka JV, JVM, Python guy).</p>
+            <p>Here you will find posts about development of whatever I'm working on or thinking about.</p>
+            <p>You can find me at <a href="https://linkedin.com/in/jvmaia">LinkedIn</a> or joaovmferreira@gmail.com!</p>
+        </section>
+
+        <section id="post1" style="display:none;">
+            <h1>When I wrote an app for internal sales</h1>
+            <h2>Technical decisions</h2>
+            <p>At the same time we were creating an API (another post to come about this API soon), and our app had the
+                same
+                functionality some of our clients will use the api to implement, so... why not use our app as our first
+                client? yep, it makes total sense</p>
+            <p>And thank god we did it, we avoided so much problems with our clients, because we were our first client,
+                up to this day I still think it was the best decision we made.</p>
+            <p>I implemented the app using React and React Native, why? Because it was easy, for sure we would have had
+                a
+                much better app with a native app, but we didn't have the time to it, and we needed to launch it fast,
+                part of the startup work.</p>
+            <p>Not so smart decision: we tried to use graphql on this app for a few weeks (less than a month), but it
+                was before the REST api was designed and created (the project didn't exist yet, not even in our minds).
+                Looking back now, GraphQL was definitely not the best choice for this app, but it was a learning
+                experience, glad we did it.</p>
+            <p>Essential things: selecting our first users are someone who we have contact daily, and can trust to give
+                real feedback every time, this sped up the process of improving the app and achieving a good product
+                fast.</p>
+            <h2>Quick story</h2>
+            <p>Mid weekday, I finished my task and grabbed another one on our Trello board (miss you old friend).</p>
+            <p>A good description of the task, but not much business context from it. Then I asked the at the time CEO
+                of the company (which was sitting on the desk in front of me).</p>
+            <p>What's the deadline of this task?</p>
+            <p>As soon as you finish it, we're submitting it to homologation.</p>
+            <p>Homologation was part of the process but to launch this app, because it required a connection with a
+                Payment gateway device (like a POS terminal)...</p>
+            <p>6 months later, after a ton of calls and no shows from the homologation team,
+                I finally got the call from my boss telling me to hit the office after my class so we can sign the
+                papers and launch the app on Play Store, god what a relief, me and my boss after 5 months fighting with
+                the homologation team, between calls and emails and 2 week delayed emails, we finally got it approved.
+            </p>
+            <p>3 months later with the app running and real people using it, we were making around 100k in sales per
+                month with it, not much
+                but enough to make a 17yo guy happy and proud. During this time I really enjoyed talking with my users
+                and proposing new features to them,
+                or even hearing them complain about a new feature I pushed, but that's where I had to learn to listen
+                and put the clients first, they're
+                the ones using your app daily, and maybe they're even using it to make their main revenue, they can be
+                using your app for one month only,
+                or for years to come, and you can't predict that, so you have to listen to them and try to understand
+                their needs.
+            </p>
+            <p>3 more months later and we got something around 100 daily users, we got one manager for 80% of our users
+                and mostly
+                of my feedback came from him, sometimes anxious asking for a new feature or with a handful suggestions
+                for improvements.
+                He brought to me a lot of pain from the users, and also a lot of happy moments when we improved
+                something on the app, counting everything we had like a year of weekly talks and feedback,
+                and I learned a lot from him
+            </p>
+            <p>
+                Up to this day (5 years later) I still talk with everyone involved in this project and we still have a
+                good friendship, we go out to drink beers and
+                laugh about the times we had, and the times we had to work hard to make it work. And that's something
+                I'm most proud of, shipping things and being kind to everyone.
+            </p>
+            <p>Like that time Dr. Who said:
+                Laugh hard, run fast, be kind.
+            </p>
+        </section>
+
+        <section id="post2" style="display:none;">
+            <h1>Debugging</h1>
+            
+            <h2>Introduction</h2>
+            <p>This will be the first post of a series, I don't know how many posts this series will have, so here we go:</p>
+            <p>First, shoutout to this talk <a href="https://www.youtube.com/watch?v=30jNsCVLpAE">https://www.youtube.com/watch?v=30jNsCVLpAE</a>, this post and the talk share some common topics but serve different purposes.</p>
+            <p>In this first post we'll consider a single-system debugging scenario, we won't have any examples or code, and we'll just <em>imagine</em> the situation, as in a real debug, 80% of the job is done without touching the computer.</p>
+            <p>What do you think when you think about debugging? Finding an error? Investigating a behavior? Probably something around that.</p>
+            <p>But let's step back: when we're about to debug something, we may only have a statement that something is wrong. Probably from an angry customer, but let's stick to that <em>something is wrong</em>. We're dealing with computers, so everything happens for a reason (or not, but we'll talk about it in another post).</p>
+
+            <h2>A debugging scenario</h2>
+            <p>If a button is doing something different than expected, where should we go? Maybe we can check the input?</p>
+            <p>That's a good start. We try that and then... we see the input is wrong. Okay, so where should we go now? Go back to where this final function is called. But wait, we have two calls to that function in the system, things start getting messier and we're feeling we lost the thread (FIO DA MEADA). What do we do now?</p>
+            <p>Let's recap: we're clicking on a button which can do two things: A and B, but it's doing B when it should be A. We only know the last function called and the result's wrong. Let's say the result is an error flag on a model. After looking more into it, we find: the input is wrong, but we also found the function is called in two different pieces of the system.</p>
+            <p>Now we have to figure out from where it's being called. Instead of one bigger problem, we have two slightly smaller ones. How can we proceed? Let's take a look into the system X1 now. Do we see any logs calling to this system on the same scenario (traceId or anything like that)? <em>Or</em> can we reproduce the button click after adding some logs to it?</p>
+            <p>Okay, we only have access to the logs, so we cannot reproduce the error (because this would make the post shorter). After checking the logs we see: from the system X1 everything's looking fine and the function is running. At this moment, you take a moment to look at the horizon and take 72 deep breaths (you really need that, trust me). So let's go back to our logs. What do we see there after looking deeper? We see the function is called twice. We had only investigated the newest call, let's go to the oldest one.</p>
+            <p>Taking a look now at the system X2, we see the input's wrong for our function from the start. Okay, now we can say we found the problem, but we don't understand it, right? We're seeing the error behavior after the button click, but the function ran twice: first the wrong one, and then the success one. Let's take a deeper look into the database row: we see the error column is filled, but so are the success fields too. Both result cases (success and error) coexist on the database.</p>
+
+            <h2>Solution approaches</h2>
+            <p>And now we have two choices: one is messier but quicker, and the other is more elegant but will take more time. Pick your alignment charts:</p>
+            <h3>Lawful good</h3>
+            <p>We have to understand why this is happening. We're engineers and nothing passes by without us noticing. We'll keep the system as clean as possible, but maybe we'll make the customer wait for a few more hours before the fix is released.</p>
+            <h3>Chaotic good</h3>
+            <p>We found the problem. Let's change how we write both the success and the error: each one should erase the fields filled by the other. If it's success, we erase the filled error fields, and the other way around. We'll make it engineering-right later, but first we'll make it customer-right.</p>
+            <blockquote>
+                <p>I chose mine, what do I do now?</p>
+            </blockquote>
+            <p>Wait for the next post, this was only the first one.</p>
+
+            <h2>Conclusion</h2>
+            <p>Thank you for reading the short story. For the sake of the story, none of our actions have any consequences in the real world, that's why the chaotic good took that path.</p>
+            <p>And now we'll do a quick talk on the reasoning while debugging: we have to find a hole in a pipe, but the pipe is made of glass so we can see through it (check the logs). We see the problem: we're getting less water at the end than we're sending at the beginning (WE WON'T TALK ABOUT FLUIDS DYNAMICS HERE). We can measure how much water each step of the pipe has (we can check each function's input and output). We can do whatever search we like. We can pick random steps of the pipe to check the water (and god bless you in that process, but it can work). We can do a binary search: if at 50% of the pipe length we have the right amount, then the leak is occurring after that. This way we get rid of 50% of the candidates to be wrong, and then we can keep going on it.</p>
+            <p>A good debugger knows what questions to ask a system, also knows how to separate the system into blocks (like a pipe step above). But above all that, he knows the problem is somewhere on the pipe, and someone'll find it—be it in the next 5 minutes, or in the next 5 hours, 5 days, or (and god bless these souls) in the next 5 months. The problem exists somewhere. If our code is 100% right, the problem could be in the libraries we're using. If not there, it can be on the browser, but it's somewhere. Debugging is, before a code skill, an investigation skill. And that's the most fun part of software engineering: creating one thing is amazing, but fixing a messy one? Even better.</p>
+        </section>
+
+    </main>
+    <script>
+        function showSection(id, updateHash = true) {
+            // Hide all sections
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(id);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+                // Update URL hash for shareable links (unless called from hash change handler)
+                if (updateHash) {
+                    window.location.hash = id;
+                }
+            }
+        }
+
+        // Handle initial load and hash changes
+        function handleHashChange() {
+            const hash = window.location.hash.substring(1); // Remove the #
+            const validSections = ['home', 'post1', 'post2'];
+            
+            if (hash && validSections.includes(hash)) {
+                showSection(hash, false); // Don't update hash, it's already set
+            } else {
+                // Default to home if no hash or invalid hash
+                showSection('home', true);
+            }
+        }
+
+        // Listen for hash changes (back/forward buttons)
+        window.addEventListener('hashchange', handleHashChange);
+
+        // Handle initial page load
+        window.addEventListener('DOMContentLoaded', handleHashChange);
+    </script>
+
+</body>
+
+</html>
