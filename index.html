@@ -60,8 +60,8 @@
         <h2>Blog Posts</h2>
         <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#post0">Debugging</a></li>
             <li><a href="#post1">When I wrote an app for internal sales</a></li>
-            <li><a href="#post2">Debugging</a></li>
         </ul>
     </nav>
 
@@ -136,7 +136,7 @@
             </p>
         </section>
 
-        <section id="post2" style="display:none;">
+        <section id="post0" style="display:none;">
             <h1>Debugging</h1>
             
             <h2>Introduction</h2>
@@ -194,7 +194,7 @@
         // Handle initial load and hash changes
         function handleHashChange() {
             const hash = window.location.hash.substring(1); // Remove the #
-            const validSections = ['home', 'post1', 'post2'];
+            const validSections = ['home', 'post1', 'post0'];
             
             if (hash && validSections.includes(hash)) {
                 showSection(hash, false); // Don't update hash, it's already set
